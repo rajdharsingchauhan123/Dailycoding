@@ -2,6 +2,7 @@ package hunderedquestion;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class ProductDemo26 {
@@ -15,7 +16,7 @@ public class ProductDemo26 {
         this.price = price;
     }
 }
-public class LambdaExpressionExample10{
+ class LambdaExpressionExample10{
     public static void main(String[] args) {
         List<ProductDemo26> list = new ArrayList<ProductDemo26>();
 
@@ -26,10 +27,7 @@ public class LambdaExpressionExample10{
 
         System.out.println("Sorting on the basis of name...");
 
-        Collections.sort(list,(p1,p2)->{
-            return p1.name.compareTo(p2.name);
-
-        });
+        Collections.sort(list, Comparator.comparing(p -> p.name));
         for (ProductDemo26 p:list){
             System.out.println(p.id+""+p.name+" "+p.price);
         }
