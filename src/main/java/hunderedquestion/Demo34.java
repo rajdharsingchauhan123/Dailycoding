@@ -1,9 +1,6 @@
 package hunderedquestion;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -27,6 +24,17 @@ public class Demo34 {
         boolean equals = list.equals(list1);
     Integer s =  list.set(1,66);
     list.add(2,55);
+
+        ListIterator<Integer> integerListIterator = list.listIterator(6);
+        System.out.println(integerListIterator);
+        while (integerListIterator.hasNext()){
+            Integer i=integerListIterator.next();
+            System.out.println(i);
+        }
+
+
+
+
         System.out.println(list);
 
         System.out.println(s);
