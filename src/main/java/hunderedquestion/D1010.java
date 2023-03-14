@@ -10,8 +10,8 @@ public class D1010 {
         int num = 0;
 
         while (number!=0){
-//            int number1 =number%10;
-            count++;
+            count =count+number%10;
+
            number=number/10;
         }
         System.out.println(count);
