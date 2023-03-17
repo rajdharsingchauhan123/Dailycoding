@@ -6,14 +6,20 @@ public class Day34 {
     public  static void reverseArray(int arr[],int n){
         int k = 0;
         int temp[] = new int[arr.length];
+try {
+
 
         for (int i = arr.length; i > 0; i--) {
             temp[k] = arr[i];
             k++;
 
 
-
         }
+        }catch (Exception e){
+
+    System.out.println(e.getMessage());
+        }
+
 
         for (int i = 0; i < arr.length; i++) {
             arr[i]=temp[k];
