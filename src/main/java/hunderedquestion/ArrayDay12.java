@@ -4,7 +4,7 @@ public class ArrayDay12 {
 
     public static void main(String[] args) {
         // find the second largest & smallest element in the array
-        int arr[]={1,2,4,23,5,666};
+        int arr[]={1,233,4,23,5,666};
         int n =arr.length;
         int temp;
 
@@ -21,6 +21,7 @@ public class ArrayDay12 {
             }
         }
         System.out.println("Second Largest:"+arr[n-2]);
+        System.out.println(arr[1]);
         System.out.println("Smallest:"+arr[0]);
     }
 
