@@ -20,6 +20,19 @@ public class Link {
     }
 
     public static void main(String[] args) {
+        LinkList theLinkedList=new LinkList();
+
+        theLinkedList.insertFirstLink("raj",11);
+        theLinkedList.insertFirstLink("rajdhar",12);
+        theLinkedList.insertFirstLink("ravi",122);
+        theLinkedList.insertFirstLink("rahul",1122);
+
+        theLinkedList.removeFirst();
+        theLinkedList.display();
+        theLinkedList.find("raj");
+        theLinkedList.removeLink("rajdhar");
+        theLinkedList.display();
+
 
     }
 }
@@ -84,5 +97,26 @@ class LinkList{
         }
         return theLink;
 
+    }
+    public Link removeLink(String bookName){
+        Link currentLink=firstLink;
+        Link previousLink=firstLink;
+        while (currentLink.bookName!=bookName){
+            if(currentLink.next==null){
+                return null;
+            }
+            else {
+                previousLink=currentLink;
+                currentLink=currentLink.next;
+            }
+        }
+        if(currentLink==firstLink){
+            firstLink=firstLink.next;
+
+        }
+        else {
+            previousLink.next=currentLink.next;
+        }
+        return currentLink;
     }
 }
