@@ -42,4 +42,27 @@ class LinkList{
         firstLink=newLink;
     }
 
+    public Link removeFirst() {
+
+        Link linkReference=firstLink;
+        if(!isEmpty()){
+            firstLink=firstLink.next;
+
+        }
+        else {
+            System.out.println("Empty LinkedList");
+        }
+        return linkReference;
+    }
+
+    public void display(){
+        Link theLink=firstLink;
+
+        while (theLink!=null){
+            theLink.display();
+            System.out.println("the next Link"+theLink.next);
+            theLink=theLink.next;
+            System.out.println();
+        }
+    }
 }
