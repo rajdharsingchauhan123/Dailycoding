@@ -65,4 +65,24 @@ class LinkList{
             System.out.println();
         }
     }
+    public Link find (String bookName){
+        Link theLink=firstLink;
+        if(!isEmpty()){
+            while (theLink.bookName!= bookName){
+                if(theLink.next==null){
+                    return null;
+
+
+                }
+                else {
+                    theLink=theLink.next;
+                }
+            }
+
+        }else {
+            System.out.println("empty LinkedList");
+        }
+        return theLink;
+
+    }
 }
