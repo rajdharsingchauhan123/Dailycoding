@@ -1,5 +1,8 @@
 package hunderedquestion;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class String03 {
     public int lengthOfLongestSubstring(String s){
         int maxLength=0;
@@ -16,5 +19,18 @@ public class String03 {
             }
         }
         return maxLength;
+    }
+    public int lengthOfLongestSubString(String s){
+        int maxLength=0;
+        Map<Character,Integer>VisitedCharacters=new HashMap<>();
+
+        for(int right=0,left=0;right<s.length();right++){
+            if(VisitedCharacters.containsKey(s.charAt(right))&& VisitedCharacters.get(s.charAt(right))>=left){
+                left=VisitedCharacters.get(s.charAt(right))+1;
+            }
+            maxLength=Math.max(maxLength,right-left+1);
+        }
+        return maxLength;
+
     }
 }
