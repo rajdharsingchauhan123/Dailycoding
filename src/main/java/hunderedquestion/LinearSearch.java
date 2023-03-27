@@ -1,6 +1,10 @@
 package hunderedquestion;
 
+import java.lang.reflect.GenericArrayType;
+import java.util.LinkedList;
+
 public class LinearSearch {
+
     public static void main(String[] args) {
         int arr[]={1,222,5,62,56};
         int a=222;
