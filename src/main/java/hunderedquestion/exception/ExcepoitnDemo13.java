@@ -3,7 +3,7 @@ package hunderedquestion.exception;
 public class ExcepoitnDemo13 {
     public static  void func() throws ArithmeticException{
 
-//tr
+//trEx
 //        System.out.println(1/0);
         throw new ArithmeticException( "hello coder");
 
