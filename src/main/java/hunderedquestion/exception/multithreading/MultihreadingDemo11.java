@@ -12,6 +12,8 @@ public class MultihreadingDemo11 extends Thread{
         MultihreadingDemo11 t1 =new MultihreadingDemo11();
         MultihreadingDemo11 t2 =new MultihreadingDemo11();
         t1.start();
+        t1.suspend();
+//        t1.resume();
         t2.start();
         for (int i=0;i<3;i++){
                 t1.yield();
