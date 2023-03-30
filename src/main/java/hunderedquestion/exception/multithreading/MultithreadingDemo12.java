@@ -15,6 +15,7 @@ public class MultithreadingDemo12 extends Thread{
     public static void main(String args[])
     {
         MultithreadingDemo12 thread1=new MultithreadingDemo12();
+//        System.out.println(thread1);
         thread1.start();
         try
         {
