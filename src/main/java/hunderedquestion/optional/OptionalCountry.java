@@ -11,6 +11,7 @@ public class OptionalCountry {
         Optional<String> checkCountry = Optional.ofNullable(countries[3]);
         Optional<String> country = Optional.of("india");
         country.ifPresent(v -> System.out.println(v.toUpperCase()));
+        country.ifPresentOrElse(v->System.out.println("the country is "+v),()->System.out.println("the country is not prisent"));
 
 //        if(checkCountry.isPresent()){
 //            String country = countries[3].toUpperCase();
