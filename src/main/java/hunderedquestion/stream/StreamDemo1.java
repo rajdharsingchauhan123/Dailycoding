@@ -11,6 +11,7 @@ public class StreamDemo1 {
         List<String>strings=List.of("one","two","four","five","six");
         long count = strings.stream().filter(s -> s.length() == 3).count();
         System.out.println(count);
+        System.out.println(count);
     }
 
 }
