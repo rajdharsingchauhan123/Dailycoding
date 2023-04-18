@@ -26,4 +26,3 @@ public class SubstringDemo {
         System.out.println("The length of the longest non-repeating character substring is " + length);
     }
     }
-}
