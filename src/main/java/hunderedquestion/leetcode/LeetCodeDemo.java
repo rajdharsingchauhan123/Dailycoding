@@ -1,37 +1,29 @@
 package hunderedquestion.leetcode;
 
 public class LeetCodeDemo {
-
-    public static int maxArea(int[] height) {
-//        int maxarea = 0;
-//        for (int left = 0; left < height.length; left++) {
-//            for (int right = left + 1; right < height.length; right++) {
-//                int width = right - left;
-//                maxarea = Math.max(maxarea, Math.min(height[left], height[right]) * width);
-//            }
-//        }
-//        return maxarea;
-
+//    public static int sortArray(int arr[]){
+//
 //    }
-        int l = 0;
-        int r = height.length - 1;
-        int max = 0;
-        while (l < r) {
-            int lh = height[l];
-            int rh = height[r];
-            int min_h = Math.min(l, r);
-            max = Math.max(max, min_h * (r - l));
-            if (l < r) l++;
-            else r--;
-        }
-        return max;
-
-    }
     public static void main(String[] args) {
-        int []height={1,8,6,2,5,4,8,3,7,8};
-        int n= height.length;
-        System.out.println(maxArea(height));
 
+        int arr[]={-1,0,1,2,-1,-4};
+        int n=arr.length;
+
+
+        for (int i = 0; i < n - 2; i++) {
+            // Fix the second element as A[j]
+            for (int j = i + 1; j < n - 1; j++) {
+                // Now find the third number
+                for (int k = j + 1; k < n; k++) {
+                    if (arr[i] + arr[j] + arr[k] == 0) {
+                        System.out.print("Triplet is " + arr[i] + ", "
+                                + arr[j] + ", " + arr[k]);
+
+                    }
+
+                }
+            }
+        }
 
     }
 }

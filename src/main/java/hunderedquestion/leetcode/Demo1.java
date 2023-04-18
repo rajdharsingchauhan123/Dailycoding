@@ -15,6 +15,7 @@ public class Demo1 {
     public static void main(String[] args) {
         System.out.println(" hello world ");
         String a ="rajdharrrr";
+
         int count =0;
         for(int i=0;i<a.length();i++){
             if(a.charAt(i)==a.charAt(88)){
